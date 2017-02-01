@@ -2656,6 +2656,8 @@ function createPage(casper) {
     /*eslint max-statements:0*/
     "use strict";
     var mainPage = require('webpage').create();
+        mainPage.captureContent = [/application\/javascript/];
+    
     mainPage.isPopup = false;
 
     var onClosing = function onClosing(closedPopup) {
